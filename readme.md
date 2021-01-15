@@ -1,7 +1,12 @@
 # BashStyle
 Stylise your bash.
 
-## To install:
+## Auto-install:
+```
+$ curl -fsSL https://raw.githubusercontent.com/Slyke/BashStyle/master/web_install.sh | bash
+```
+
+## Manual install:
 ```
 git clone git@github.com:Slyke/BashStyle.git
 cd BashStyle

@@ -1,9 +1,10 @@
 #!/bin/bash
 
+CDIR=$(pwd)
 touch ~/.bashrc
 mkdir -p ~/.bashstyle
 
-if grep -qF ". ~/.bashstyle/bashrc_inject" ~/.bashrc;then
+if grep -qF ". ~/.bashstyle/bashrc_inject" ~/.bashrc; then
   cp ./bashrc_inject.sh ~/.bashstyle/bashrc_inject.sh
   cp ./colors.conf ~/.bashstyle/colors.conf
   cp ./install.sh ~/.bashstyle/reinstall.sh
@@ -21,3 +22,4 @@ else
 fi
 
 source ~/.bashrc
+cd $CDIR
