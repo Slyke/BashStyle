@@ -9,9 +9,9 @@ mkdir -p ~/.bashstyle
 cd ~/.bashstyle
 
 if grep -qF ". ~/.bashstyle/bashrc_inject" ~/.bashrc; then
-  rm bashrc_inject.sh
-  rm colors.conf
-  rm reinstall.sh
+  rm bashrc_inject.sh 2>/dev/null 
+  rm colors.conf 2>/dev/null 
+  rm reinstall.sh 2>/dev/null 
 
   wget -q -O bashrc_inject.sh "$REPO/master/bashrc_inject.sh"
   wget -q -O colors.conf "$REPO/master/colors.conf"
@@ -19,9 +19,9 @@ if grep -qF ". ~/.bashstyle/bashrc_inject" ~/.bashrc; then
 
   echo "BashStyle is already installed in '~/.bashrc'. Replaced source files in '~/.bashstyle/'"
 else
-  rm bashrc_inject.sh
-  rm colors.conf
-  rm reinstall.sh
+  rm bashrc_inject.sh 2>/dev/null 
+  rm colors.conf 2>/dev/null 
+  rm reinstall.sh 2>/dev/null 
 
   wget -q -O bashrc_inject.sh "$REPO/master/bashrc_inject.sh"
   wget -q -O colors.conf "$REPO/master/colors.conf"
